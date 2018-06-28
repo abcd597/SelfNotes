@@ -27,7 +27,7 @@
 <script type="text/javascript">  
 new Vue({ 
  el: '#id', //使用Vue 區塊的id
-data: {  }, //使用Vue 語法塞值要使用的data
+ data: {  }, //使用Vue 語法塞值要使用的data
  methods: {  } //事件處理使用的function擺這
 })
 </script>
@@ -62,7 +62,7 @@ par1:"參數A"
 >v-on     : 處理事件，click、change...etc
 >兩者有簡寫語法 :
 >```Vue 
-><a v-bind:href="url"></a> = <a :href="url"></a> 
+> <a v-bind:href="url"></a> = <a :href="url"></a> 
 > <a v-on:click="doSomething"></a> = <a @click="doSomething"></a>
 >```
 * v-if="para1"--*就是if，等號後面參數加在data:{ }裡，true | false*
@@ -93,6 +93,3 @@ method1:function(){
 }
 })
 ```
-
-
-

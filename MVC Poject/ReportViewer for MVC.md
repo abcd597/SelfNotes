@@ -59,6 +59,6 @@ cshtml畫面上面要先加上
 ```
 
 >ReportViewer建立的.rdlc檔案發行的時候不會跟專案一起建立，
->要手動移到編譯完的資料夾裡
->需設定.rdlc的屬性→建置動作:內容
-
+>要手動移到編譯完的資料夾裡   
+>需設定.rdlc的屬性→建置動作:內容   
+![rdlc attribute](https://github.com/abcd597/SelfNotes/blob/master/MVC%20Poject/rdlcattribute.png)

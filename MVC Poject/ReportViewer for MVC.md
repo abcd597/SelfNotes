@@ -5,7 +5,7 @@
 
 ##### 步驟1:下載ReportViewer for MVC
 去下載ReportViewer for MVC
-VS使用Nuget搜尋`ReportViewerForMvc`
+VS使用Nuget搜尋`ReportViewerForMvc`   
 `PM> Install-Package ReportViewerForMvc`
 ##### 步驟2建立報表檔案.rdlc
 要建立.rdlc要先建立DataSet.xsd資料集，

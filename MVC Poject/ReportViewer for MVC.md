@@ -57,3 +57,7 @@ cshtml畫面上面要先加上
     @Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer, new { id = "reportviewer_control", style = "width:90%;height:90%;text-align:center;" })
 </div>
 ```
+
+>## ReportViewer建立的.rdlc檔案發行的時候不會跟專案一起建立，要手動移到編譯完的資料夾裡
+>## 須設定.rdlc的屬性→建置動作:內容
+>

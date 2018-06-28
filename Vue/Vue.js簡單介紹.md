@@ -1,19 +1,25 @@
 # Vue.js簡單介紹
 
 >### 使用Vue.js步驟:
-> 1. INCLUDE js
+> 1. include js
 > 2. javascript裡Vue.js宣告
 > 3. html元件加入對應Vue屬性
 
 ### 1. include js
 畫面先需include Vue.js的相關檔案才能用Vue語法，
-可以去官網下載.js檔或直接用CDN加入:
-(1) Vue.js 本身檔案:
-```javascript <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>```
+可以去官網下載.js檔或直接用CDN加入:    
+(1) Vue.js 本身檔案:   
+```javascript
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+```
 (2) Bootstrap for Vue:
-```javascript <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.0.0-rc.11/dist/bootstrap-vue.common.min.js"></script> ```
-(3) Vue 使用的ajax:
-```javascript <script src="https://unpkg.com/axios/dist/axios.min.js"></script> ```
+```javascript 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.0.0-rc.11/dist/bootstrap-vue.common.min.js"></script> 
+```
+(3) Vue 使用的ajax:     
+```javascript
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+```
 ***
 ### 2. javascript裡Vue.js宣告
 使用Vue.js需要先在javascript裡宣告Vue的物件才能使用後續語法

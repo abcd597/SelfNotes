@@ -61,4 +61,7 @@ cshtml畫面上面要先加上
 >ReportViewer建立的.rdlc檔案發行的時候不會跟專案一起建立，
 >要手動移到編譯完的資料夾裡   
 >需設定.rdlc的屬性→建置動作:內容   
-![rdlc attribute](https://github.com/abcd597/SelfNotes/blob/master/MVC%20Poject/rdlcattribute.png)
+![rdlc attribute](https://github.com/abcd597/SelfNotes/blob/master/MVC%20Poject/rdlcattribute.png)   
+
+>ReportViewer如果無法在網站上呈現要先使用cmd打SUBST x:C:\WINDOWS\ASSEMBLY，然後找到GAC_MSIL資料夾中把錯誤訊息缺少的.dll檔案放到專案的bin資料夾中。   
+>解法參考網站: https://dotblogs.com.tw/yangxinde/2012/11/07/80655

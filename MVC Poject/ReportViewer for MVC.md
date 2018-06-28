@@ -38,7 +38,11 @@ public ActionResult A()
 }
 ```
 #### 步驟4前端輸出
-cshtml畫面上面要先加上`@using ReportViewerForMvc;`把套件include進來才能用html.helper直接帶出報表
+cshtml畫面上面要先加上
+```c#
+@using ReportViewerForMvc;
+```
+把套件include進來才能用html.helper直接帶出報表
 
 ```c#
 @using ReportViewerForMvc;

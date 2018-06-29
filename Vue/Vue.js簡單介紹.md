@@ -32,7 +32,7 @@ new Vue({
 })
 </script>
 ```
-```html
+```c#
 <div id="id"></div>
 ```
 ***
@@ -40,7 +40,7 @@ new Vue({
 要在畫面中顯示的資料要使用data內給予參數綁定，
 要使用function則要在method裡建立
 基本Vue語法:
-#### 1) {{參數1}}  *在html中直接顯示參數*
+#### 1) `{{參數1}}`  *在html中直接顯示參數*
 ```javascript
 <script type="text/javascript">  
 new Vue({ 
@@ -51,7 +51,7 @@ par1:"參數A"
 })
 </script>
 ```
-```html
+```Vue
 <div id="div1">
 {{par1}} <!--將顯示「參數A」-->
 </div>
@@ -78,8 +78,8 @@ ex:
    <td>{{data.SERVERLINK}}</td>   
    </tr> 
 ```
-datas為Json 資料，data為datas的子元素，可以為物件或元素，可為多值ex: `v-for="(value, key, index) in object`*
-* `v-model` : * 用來做資料雙向繫結使用*
+datas為Json 資料，data為datas的子元素，可以為物件或元素，可為多值ex: `v-for="(value, key, index) in object`
+* `v-model` : 用來做資料雙向繫結使用
 #### 3)method
 Vue 用來處理function的語法
 ```javascript

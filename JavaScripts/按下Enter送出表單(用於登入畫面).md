@@ -4,7 +4,7 @@
 利用onkeypress事件在user按下鍵盤時偵測是不是按下Enter，是的話就提交表單。
 
 HTML:
-```
+```c#
 <input id="PW" name="PW" type="password" onkeypress="return submitenter(this,event)" />
 ```
 JavaScripts:

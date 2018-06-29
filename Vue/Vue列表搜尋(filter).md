@@ -45,14 +45,14 @@ keywordscheck方法
 HTML中列表使用`v-for="data in filterlist`列出資料
 ```c#
  <table>
-                    <thead>
-                        <tr>
-                            <th>資料表頭/th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="data in filterlist">
-                            <td>{{data.SERVERFUNCTION}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+         <thead>
+            <tr>
+                 <th>資料表頭/th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="data in filterlist">
+                  <td>{{data.SERVERFUNCTION}}</td>
+            </tr>
+           </tbody>
+</table>

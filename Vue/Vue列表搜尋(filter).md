@@ -34,7 +34,7 @@ new Vue({
 只是computed裡的function只有在function裡相關參數有變動到的時候才會執行，而method裡的function只要Vue裡有任何資料改變都會進行function動作，
 因此若要追求效能，只有相關變數改動才執行function時可用computed。而這篇裡的computed放的是用來做回傳篩選過後的data的function，裡面呼叫的是methods裡的
 keywordscheck方法  
-* `methods`:裡面放的是keywordscheck function，用來判斷要搜尋的欄位裡包不包含`v-model`裡我們輸入的關鍵字，在使用javascript的filter()函式篩選出資料
+* `methods`:裡面放的是keywordscheck function，用來判斷要搜尋的欄位裡包不包含`v-model`裡我們輸入的關鍵字，再使用javascript的filter()函式篩選出資料
 >`filter()`方法:傳回符合回呼函式中指定之條件的陣列元素。  
 >語法:array1.filter(callbackfn[, thisArg])  
 >參考網址:https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter  

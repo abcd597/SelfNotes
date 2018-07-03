@@ -1,5 +1,4 @@
 ### Vue的Component
->Vue.js的最大特色應該就是他的component了，可以定義重複使用的元件
 
 #### 步驟1 Vue.component的宣告
 ```Vue

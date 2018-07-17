@@ -48,4 +48,5 @@ function中如果then裡使用的是`function(response){}`則必須在事件func
 或可改寫為
 `.then((reponse)=>{
 this.TableData=reponse.data;
-})`
+})`  
+>Vue的ajax response不像jquery的可以直接使用response處理資料，要取到回傳資料值必須用`response.data`取值

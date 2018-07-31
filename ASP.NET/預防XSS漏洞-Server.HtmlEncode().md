@@ -33,7 +33,7 @@
         </h1>
         <h1>
         <%=Server.HtmlEncode(test_par)%>
-        <%--<%:test_par%>--%>
+        <!--<%:test_par%>-->
         </h1>
      </div>
 </asp:Content>

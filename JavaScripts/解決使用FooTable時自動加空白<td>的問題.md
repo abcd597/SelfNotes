@@ -100,3 +100,25 @@ $('.remove-3>td:nth-child(2),.remove-3>td:nth-child(3),.remove-3>td:nth-child(4)
 })
 </script>
 ```
+
+更新:  
+後來再度使用時發現，換頁後的的td如果還是有colspan的話一樣會額外填滿，所以改用另一種方法  
+```javascript
+ $('#ListTable').footable({
+            "paging": {
+                enable: true
+            },
+            "on": {
+                "postdraw.ft.table": function (e, ft) {
+                    $('#ListTable > tbody > tr.text-alert > td:nth-child(2),#ListTable > tbody > tr.text-alert > td:nth-child(3),#ListTable > tbody > tr.text-alert > td:nth-child(4)').remove();
+                },
+                "after.ft.paging": function (e, ft) {
+                    $('#ListTable > tbody > tr.text-alert > td:nth-child(2),#ListTable > tbody > tr.text-alert > td:nth-child(3),#ListTable > tbody > tr.text-alert > td:nth-child(4)').remove();
+                }
+            }
+        });
+```
+搭配footable本身的事件處理`on`裡面多加了2個事件處理的動作`"postdraw.ft.table"`、`"after.ft.paging"`，
+`postdraw.ft.table`:畫表格時的事件處理。  
+`after.ft.paging`:換頁完畢後做的動作，主要的處理在這邊，在切換到分頁的某頁後才做的動作，裡面是吧多餘的td給`remove()`掉
+

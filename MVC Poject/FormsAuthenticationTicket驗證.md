@@ -36,4 +36,47 @@ User.Identity.Name.ToString()
 ((FormsIdentity)User.Identity).Ticket.UserData
 ```
 直接取得上面講到的`login.USER_AUTHORITY.ToString()`
+  
+3.設定腳色  
+使用AuthorizeAttribute的功能可以控制在進入Controller中某些funciton時的權限
+```c#
+[Authorize]//←這個
+public ActionResult OneAction()
+{
+    return View();
+}
+```
+屬性最簡單的分兩種「AllowAnonymous」、「Authorize」，  
+AllowAnonymous:允許任何人進入這個function  
+Authorize:需要經過登入驗證成功後才可以進入這個function  
+  
+Authorize又可再依據Role,User是那些在劃分權限  
+`[Authorize(Roles="Administrators")]、[Authorize(Users="Alice,Bob")]`這樣
 
+但是必須在Global.asax.cs中增加一段像第2點取驗證資訊的方法:  
+參考自(其實是照抄)→[別人的Blog](https://dotblogs.com.tw/mickey/2017/01/01/154812)
+```c#
+protected void Application_AuthenticateRequest(object sender, EventArgs e)
+{
+  if (Request.IsAuthenticated)
+  {
+   // 先取得該使用者的 FormsIdentity
+   FormsIdentity id = (FormsIdentity)User.Identity;
+   // 再取出使用者的 FormsAuthenticationTicket
+   FormsAuthenticationTicket ticket = id.Ticket;
+   // 將儲存在 FormsAuthenticationTicket 中的角色定義取出，並轉成字串陣列
+   string[] roles = ticket.UserData.Split(new char[] { ',' });
+   // 指派角色到目前這個 HttpContext 的 User 物件去
+   //剛剛在創立表單的時候，你的UserData 放使用者名稱就是取名稱，我放的是群組代號，所以取出來就是群組代號
+   //然後會把這個資料放到Context.User內
+   Context.User = new GenericPrincipal(Context.User.Identity, roles);
+   }
+}
+```
+然後Web.config中也要設定:
+```c#
+<authentication mode="Forms">
+ <forms loginUrl="~/System/Login" timeout="3000" protection="All" slidingExpiration="true" />
+</authentication>
+```
+之後當沒有權限或沒通過登入驗證時畫面就會跳轉到`System/Login`這畫面。

@@ -4,6 +4,7 @@
 >檔案連結[SQL-Snippet.snippet](https://github.com/abcd597/SelfNotes/blob/master/ASP.NET/SQL-Snippet.snippet)  
   
 >後來發現把這段改成一個固定Function，參數帶入`public void sqlconnect(SqlCommand cmd)`只要在外部建立好SqlCommand的SQL字串與參數，再直接帶入function內就好，再依要回傳DataTable或String去改變型態宣告`void`為`DataTable`或`String`就好  
+
 1.新增1個XML檔案
 開Visual Studio→檔案→新增→檔案→XML檔  
   

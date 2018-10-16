@@ -35,7 +35,7 @@ User.Identity.Name.ToString()
 ```c#
 ((FormsIdentity)User.Identity).Ticket.UserData
 ```
-直接取得上面講到的`login.USER_AUTHORITY.ToString()`
+直接取得上面講到的`login.USER_AUTHORITY.ToString()`，用在Master Page中Menu顯示連結好用  
   
 3.設定腳色  
 使用AuthorizeAttribute的功能可以控制在進入Controller中某些funciton時的權限

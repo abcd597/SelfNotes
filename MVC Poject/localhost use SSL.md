@@ -1,4 +1,4 @@
-## localhost use SSL(讓localhost也是https://)
+## localhost use SSL(localhost https)
 
 >mkcert  
 >choco
@@ -29,5 +29,5 @@ mkcert example.com "*.example.com" example.test localhost 127.0.0.1 ::1
 ```  
 
 3. Change visual studio project attribute 
-[stack overflow](https://stackoverflow.com/questions/41075478/visual-studio-2017-enable-ssl) 
+[stack overflow](https://stackoverflow.com/a/48980188) 
 (3rd floor)  

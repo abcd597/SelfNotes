@@ -28,7 +28,7 @@ certificate is at`C:\Windows\System32`
 
 3. change `.p12` extension to `.pfx`  
   
-4.Import to IIS  
+4. Import to IIS  
 * Select mechine  
 * Double click Server Certificates icon  
 * Click "Import"  
